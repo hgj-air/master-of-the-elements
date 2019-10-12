@@ -15,12 +15,18 @@ public class MyActionScript : MonoBehaviour
     public GameObject ControllerRight;
     public ParticleSystem ParticleSys;
     public float ShootVelocityMultiplier;
+    public GameObject Enemy;
     
     // Start is called before the first frame update
     void Start()
     {
         TriggerActionLeft.AddOnChangeListener(TriggerChange, SteamVR_Input_Sources.LeftHand);
         TriggerActionRight.AddOnChangeListener(TriggerChange, SteamVR_Input_Sources.RightHand);
+        for (int i = -2; i < 3; i++)
+        {
+            var e = Instantiate(Enemy);
+            e.transform.position = new Vector3(-i, 0.2f, 0.5f);
+        }
     }
 
     private void TriggerChange(SteamVR_Action_Boolean fromaction, SteamVR_Input_Sources fromsource, bool newstate)
