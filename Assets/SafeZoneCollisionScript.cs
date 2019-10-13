@@ -16,12 +16,14 @@ public class SafeZoneCollisionScript : MonoBehaviour
         float zpos = transform.position.z;
         if(xpos > -1.5 && xpos < 1.5 && zpos > -1.5 && zpos < 1.5)
         {
-            if (--StateManager.Instance.Lives <= 0)
+            if (--StateManager.Instance.Lives < 0)
             {
-                Debug.Log("Game over!");
+                StateManager.Instance.Lives = 0;
             }
-
-            StageManager.Instance.Score -= 1000;
+            else
+            {
+                StateManager.Instance.Score -= 1000;
+            }
 
             Destroy(gameObject);
         }
