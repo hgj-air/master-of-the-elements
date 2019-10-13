@@ -21,6 +21,8 @@ public class SafeZoneCollisionScript : MonoBehaviour
                 Debug.Log("Game over!");
             }
 
+            StageManager.Instance.Score -= 1000;
+
             Destroy(gameObject);
         }
     }
