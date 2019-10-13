@@ -15,6 +15,10 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see [https://www.gnu.org/licenses/agpl-3.0.en.html](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
+Please note: 
+Some of our assets may not be licensed under the AGPLv3-License. Namely, the AssetStore-Assets are affected. They are, however, still freely available.  
+
+
 ### Copyright holders
 To simplify recording copyright holders, we refer to the version control history in our license headers. To alleviate the issue of authorship information vs copyright information https://reuse.software/faq/#copyright-holder-author, we only allow contributions from authors who personally hold the copyright to their respective contributions.
 
