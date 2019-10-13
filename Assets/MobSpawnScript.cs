@@ -9,7 +9,7 @@ public class MobSpawnScript : MonoBehaviour
     private System.Random rnd = new System.Random();
     private float[] XPositions;
     private float[] ZPositions;
-    
+
     public float SpawnDelay;
     public GameObject[] Enemies;
     public float MapXSize;
@@ -24,27 +24,30 @@ public class MobSpawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _timer += Time.deltaTime;
+      if (StateManager.Instance.Lives != 0)
+      {
+          _timer += Time.deltaTime;
 
-        if (_timer > SpawnDelay)
-        {
-            _timer -= SpawnDelay;
-            float xpos = 0;
-            float zpos = 0;
-            while (xpos > -10 && xpos < 10 && zpos > -10 && zpos < 10)
-            {
-                xpos = (float)(rnd.NextDouble() * MapXSize - MapXSize / 2);
-                zpos = (float)(rnd.NextDouble() * MapZSize - MapZSize / 2);
-            }
-            
-            
-            Vector3 pos = new Vector3(xpos, 0, zpos);
-            GameObject enemy = Instantiate(Enemies[rnd.Next(0, 4)], pos, Quaternion.Euler(0, 0, 0));
-            ConstraintSource c = new ConstraintSource();
-            c.weight = 1;
-            c.sourceTransform = Plane.transform;
-            enemy.GetComponent<LookAtConstraint>().AddSource(c);
-        }
+          if (_timer > SpawnDelay)
+          {
+              _timer -= SpawnDelay;
+              float xpos = 0;
+              float zpos = 0;
+              while (xpos > -10 && xpos < 10 && zpos > -10 && zpos < 10)
+              {
+                  xpos = (float)(rnd.NextDouble() * MapXSize - MapXSize / 2);
+                  zpos = (float)(rnd.NextDouble() * MapZSize - MapZSize / 2);
+              }
+
+
+              Vector3 pos = new Vector3(xpos, 0, zpos);
+              GameObject enemy = Instantiate(Enemies[rnd.Next(0, 4)], pos, Quaternion.Euler(0, 0, 0));
+              ConstraintSource c = new ConstraintSource();
+              c.weight = 1;
+              c.sourceTransform = Plane.transform;
+              enemy.GetComponent<LookAtConstraint>().AddSource(c);
+          }
+      }
     }
 }
 
