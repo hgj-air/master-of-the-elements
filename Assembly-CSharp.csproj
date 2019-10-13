@@ -61,6 +61,7 @@
     <Compile Include="Assets\EnemyHealth.cs" />
     <Compile Include="Assets\MobSpawnScript.cs" />
     <Compile Include="Assets\MyActionScript.cs" />
+    <Compile Include="Assets\OSDScript.cs" />
     <Compile Include="Assets\ParticleCollisionScript.cs" />
     <Compile Include="Assets\SafeZoneCollisionScript.cs" />
     <Compile Include="Assets\Scripts\Mainscript.cs" />
