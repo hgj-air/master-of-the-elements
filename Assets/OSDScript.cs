@@ -19,11 +19,16 @@ public class OSDScript : MonoBehaviour
       if (StateManager.Instance.Lives != 0)
       {
         Text.text = $"Lives: {StateManager.Instance.Lives}        \nScore: {StateManager.Instance.Score.ToString("D8")}";
-      }else{
-        if (TimeLasted == default) {
+      }
+      else
+      {
+        if (TimeLasted == default)
+        {
           TimeLasted = Time.realtimeSinceStartup;
         }
-        Text.text = $"Game Over!        \nYour Score: {StateManager.Instance.Score.ToString("D8")}        \nYou lasted: {(int)TimeLasted} seconds."
+
+        Text.text =
+          $"Game Over!        \nYour Score: {StateManager.Instance.Score.ToString("D8")}        \nYou lasted: {(int) TimeLasted} seconds.";
       }
     }
 }
