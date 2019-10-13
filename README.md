@@ -1,11 +1,11 @@
-Master of the elements 
+Master of the Elements
 ============================
 
-Hetzner Game Jam - Room "Air" 
+Master of the Elements - Made on Hetzner Game Jam - Room "Air" 
 
 Game mechanics 
 ---------------
-With the vive controller you can aim and with the track pads you can shoot. You need to defend the safe zone vs Monsters and every minute the spawn time is decremented. You have 3 lifes when a Monster comes in the safe zone you lose a life. For every kill you get 100 points when you hit the monster with the counter element you get 200 points more.
+With the Vive controller you can aim and with the track pads you can shoot the different elements. You need to defend the safe zone against the monsters. Every minute the spawn time gets reduced and monsters spawn faster. You have 3 lives. When a monstergets  into your safe zone you lose a life. For every kill you get 100 points and if you hit the monster with the counter element you get 200 points extra.
 
 Legal Notices 
 -------------
