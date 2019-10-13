@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class ParticleCollisionScript : MonoBehaviour
 {
     public ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
+    public string Element = "";
 
     void Start()
     {
@@ -21,8 +21,27 @@ public class ParticleCollisionScript : MonoBehaviour
         {
             if (other.CompareTag("Enemy"))
             {
-                Destroy(other.transform.parent.gameObject);
+                TakeDamage(other);
+            }
+        }
+    }
+
+    void TakeDamage(GameObject obj)
+    {
+        bool isCritical = obj.transform.parent.gameObject.CompareTag(Element);
+        EnemyHealth enemyHealth = obj.transform.parent.GetComponent<EnemyHealth> ();
+        if (enemyHealth != null)
+        {
+            if (isCritical)
+            {
+                enemyHealth.TakeDamage(3);
+            }
+            else
+            {
+                enemyHealth.TakeDamage(1);
             }
         }
     }
 }
+
+
