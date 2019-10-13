@@ -35,6 +35,7 @@ public class ParticleCollisionScript : MonoBehaviour
             if (isCritical)
             {
                 enemyHealth.TakeDamage(3);
+                StateManager.Instance.Score += 200;          
             }
             else
             {
@@ -43,5 +44,3 @@ public class ParticleCollisionScript : MonoBehaviour
         }
     }
 }
-
-
