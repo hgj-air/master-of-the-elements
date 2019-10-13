@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see [https://www.gnu.org/licenses/agpl-3.0.en.html](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
 Please note: 
-Some of our assets might not be licensed under the AGPL3-License. Namely, the AssetStore-Assets are affected. They are, however, still freely available.  
+Some of our assets may not be licensed under the AGPLv3-License. Namely, the AssetStore-Assets are affected. They are, however, still freely available.  
 
 
 ### Copyright holders
