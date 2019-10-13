@@ -35,15 +35,6 @@ public class MyActionScript : MonoBehaviour
     {
         ParticleSys.transform.SetPositionAndRotation(GetMedianControllerPosition(),GetMedianControllerQuaternion());    
         ParticleSys.Play();
-        //ParticleSys.GetComponent<Rigidbody>().velocity = ShootVelocityMultiplier * GetMedianControllerForwardDirection();
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Vector3 vec = Vector3.Lerp(ControllerLeft.transform.position, ControllerRight.transform.position, 0.5f);
-        //Sphere.transform.position = vec;
     }
 
     private Vector3 GetMedianControllerPosition()
@@ -55,10 +46,4 @@ public class MyActionScript : MonoBehaviour
     {
         return Quaternion.Lerp(ControllerLeft.transform.rotation, ControllerRight.transform.rotation, 0.5f);
     }
-
-    private Vector3 GetMedianControllerForwardDirection()
-    {
-        return Vector3.Lerp(ControllerLeft.transform.forward, ControllerRight.transform.forward, 0.5f);
-    }
-    
 }
