@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class MobSpawnScript : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class MobSpawnScript : MonoBehaviour
     private float[] ZPositions;
     
     public float SpawnDelay;
-    public GameObject EnemyWater;
+    public GameObject[] Enemies;
     public float MapXSize;
     public float MapZSize;
+    public GameObject Plane;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class MobSpawnScript : MonoBehaviour
 
         if (_timer > SpawnDelay)
         {
+            _timer -= SpawnDelay;
             float xpos = 0;
             float zpos = 0;
             while (xpos > -10 && xpos < 10 && zpos > -10 && zpos < 10)
@@ -36,8 +39,16 @@ public class MobSpawnScript : MonoBehaviour
             
             
             Vector3 pos = new Vector3(xpos, 0, zpos);
-            GameObject enemy = Instantiate(EnemyWater, pos, Quaternion.Euler(-pos.x, -pos.y, -pos.z));
-            _timer -= SpawnDelay;
+            GameObject enemy = Instantiate(Enemies[rnd.Next(0, 4)], pos, Quaternion.Euler(0, 0, 0));
+            ConstraintSource c = new ConstraintSource();
+            c.weight = 1;
+            c.sourceTransform = Plane.transform;
+            enemy.GetComponent<LookAtConstraint>().AddSource(c);
         }
     }
 }
+
+
+// TODO:
+// Correct mob position (face to player)
+// Let mobs move to player

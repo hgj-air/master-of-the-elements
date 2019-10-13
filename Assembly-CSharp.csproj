@@ -57,10 +57,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\amusedART\StoneMonster\Script\Animation_Test.cs" />
+    <Compile Include="Assets\EnemyHealth.cs" />
     <Compile Include="Assets\MobSpawnScript.cs" />
     <Compile Include="Assets\MyActionScript.cs" />
     <Compile Include="Assets\ParticleCollisionScript.cs" />
+    <Compile Include="Assets\SafeZoneCollisionScript.cs" />
     <Compile Include="Assets\Scripts\Mainscript.cs" />
+    <Compile Include="Assets\StateManager.cs" />
+    <Compile Include="Assets\WalkScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/home/markus/HGJ_VR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
