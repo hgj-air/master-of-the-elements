@@ -23,6 +23,13 @@ public class SafeZoneCollisionScript : MonoBehaviour
             else
             {
                 StateManager.Instance.Score -= 1000;
+
+                if (StateManager.Instance.Score < 0)
+                {
+
+                    StateManager.Instance.Score = 0;
+
+                }
             }
 
             Destroy(gameObject);
