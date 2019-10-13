@@ -1,11 +1,14 @@
-Hetzner Game Jam - Air
+Master of the elements 
 ============================
 
-Hetzner Game Jam - Room "Air"
+Hetzner Game Jam - Room "Air" 
 
-Legal Notices
+Game mechanics 
+---------------
+With the vive controller you can aim and with the track pads you can shoot. You need to defend the safe zone vs Monsters and every minute the spawn time is decremented. You have 3 lifes when a Monster comes in the safe zone you lose a life. For every kill you get 100 points when you hit the monster with the counter element you get 200 points more.
+
+Legal Notices 
 -------------
-
 ### License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -20,3 +23,5 @@ To simplify recording copyright holders, we refer to the version control history
 
 ### REUSE
 This repository aims to be [REUSE](https://reuse.software) compliant.  If it is not, feel free to open an issue.
+
+
