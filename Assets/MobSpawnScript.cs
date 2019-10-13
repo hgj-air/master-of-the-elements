@@ -6,6 +6,7 @@ using UnityEngine.Animations;
 public class MobSpawnScript : MonoBehaviour
 {
     private float _timer = 0.0f;
+    private float _timer2 = 0.0f;
     private System.Random rnd = new System.Random();
     private float[] XPositions;
     private float[] ZPositions;
@@ -27,6 +28,13 @@ public class MobSpawnScript : MonoBehaviour
       if (StateManager.Instance.Lives != 0)
       {
           _timer += Time.deltaTime;
+          _timer2 += Time.deltaTime;
+
+          if (_timer2 > 60.0f && SpawnDelay > 3.0f)
+          {
+              SpawnDelay -= 1.5f;
+              _timer2 = 0.0f;
+          }
 
           if (_timer > SpawnDelay)
           {
